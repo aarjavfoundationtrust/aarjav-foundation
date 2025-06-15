@@ -74,6 +74,23 @@
   font-size: 24px;
   z-index: 3;
 }
+.video-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 720px;        /* Increase max-width for larger screens */
+  margin: 40px auto;       /* Add vertical spacing and center horizontally */
+  aspect-ratio: 16 / 9;    /* Modern way to maintain aspect ratio */
+  background: #000;        /* Optional: black background for letterboxing */
+  border-radius: 12px;     /* Optional: rounded corners */
+  overflow: hidden;
+}
+.video-responsive iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
@@ -95,7 +112,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Modal Overlay and Content -->
 <div id="videoModal" style="display:none;">
   <div class="modal-overlay"></div>
-  <div class="modal-content">
+  <div class="modal-content video-responsive">
     <span id="closeModalBtn" class="close-btn">&times;</span>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qBD31ZoROOQ" frameborder="0" allowfullscreen></iframe>
   </div>
@@ -686,5 +703,18 @@ document.getElementById('closeModalBtn').onclick = function() {
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
     
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/684ed60c2c9cc91910b7cdad/1itpv8968';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
   </body>
 </html>
